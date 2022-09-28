@@ -23,5 +23,5 @@ help:
 	@echo " main.o"
 	@echo " quad_area.o"
 	@echo " quad_perimeter.o"
-	@echo " Print.o"
+	@echo " quad_angle.o"
 	@echo " clean: removes *.o, *.txt, and *.exe files"
