@@ -9,12 +9,13 @@
 
 //q: quadrilateral to do the calculations with
 void compute_inner_angle(quad* q) {
-    //for each of the four lines, it calculates the length of the line, and adds it to the perimeter
-    //variable in the quadrilateral variable
+    //for each of the four lines, it calculates the length of the line, 
+    //and adds it to the perimeter variable in the quadrilateral variable
     
     double length[4];
     double u[4][3];
     
+    //calculated the length of each edge on the quadrilateral
     for (int i = 0; i < 4; i++) {
         length[i] = sqrt(pow(q->node[(i+1) % 4].x - q->node[i].x, 2) + pow(q->node[(i+1) % 4].y - q->node[i].y, 2));
         
@@ -23,12 +24,14 @@ void compute_inner_angle(quad* q) {
         u[i][2] = 0.0;
     }
     
+    //calculates the angle by dividing the dot product by length of the edges multiplied
     for (int i = 0; i < 4; i++) {
         q->inner_angle += acos(compute_dot_product(u[i], u[(i+1) % 4]) / length[i] / length[(i+1) % 4]);
         printf("Angle: %lf\n", acos(compute_dot_product(u[i], u[(i+1) % 4]) / length[i] / length[(i+1) % 4]));
     }
 }
 
+//function for calculating dot product on the specified edges
 double compute_dot_product(double u[], double v[]) {
     double temp = 0;
     for (int i = 0; i < 3; i++){
