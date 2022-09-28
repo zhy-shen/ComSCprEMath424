@@ -13,10 +13,14 @@ void GenerateList (node ** head , const int num_nodes ) {
     
     for (int i=0; i< num_nodes ; i++) {
         temp = (node *) malloc(sizeof(node));
+        
+        //get 8 digit numbers to put in linked list (student id?)
         int value2 = rand () % 100000000;
         if (value2 < 10000000) {
             value2 = (value2 + 99999999) % 100000000;
         }
+        
+        //set the value to the 8 digit number
         temp ->value = value2;
         temp ->position = 0;
         printf("%10i",temp ->value);
