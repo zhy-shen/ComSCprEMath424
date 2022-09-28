@@ -10,6 +10,7 @@
 int GetKey () {
     int key;
     printf("\n Enter key to search: ");
+    //get the key from user input
     scanf("%i", &key);
     
     return key;
