@@ -10,6 +10,8 @@
 int GetNumberOfNodes() {
     int num;
     printf("\n Enter number of Nodes: ");
+    
+    //get the number of nodes from user input
     scanf("%d", &num);
     
     return num;
