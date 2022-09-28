@@ -11,7 +11,6 @@ void Print(const int forward , const node* head) {
     if (head == NULL) {
         printf(" List is emtpy.\n\n");
         return;
-        
     }
     
     printf("\n");
@@ -19,6 +18,7 @@ void Print(const int forward , const node* head) {
     printf(" |Pos:| Val:     | Address:       | Next:          |\n");
     printf(" ---------------------------------------------------\n");
     
+    //whether to use the regular or reverse print function
     switch(forward) {
         case 0:
             ReversePrintList (head);
@@ -34,6 +34,11 @@ void Print(const int forward , const node* head) {
     printf(" ---------------------------------------------------\n");
 }
 
+//changed to print out 8 digit integers with proper spacing
+//pos: position in the linked list
+//val: value of the node
+//head: memory location of current node
+//next: memory location of next node in linked list
 void PrintLine (const int pos ,const int val, const node* head, const node* next) {
     printf(" |%3i | %08i |%15p |%15p |\n",pos ,val ,head ,next);
 }
