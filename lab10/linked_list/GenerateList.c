@@ -8,6 +8,10 @@
 #include <time.h>
 #include "node.h"
 
+/**
+* Node** head: pointer to the head of the linked list
+* const int num_nodes: the number of nodes in the linked list
+**/
 void GenerateList (node ** head , const int num_nodes ) {
     node* temp; srand( time(NULL) );
     
