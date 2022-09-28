@@ -16,7 +16,7 @@ int main () {
     GenerateList (&head , num_nodes);
     
     // Print list to screen
-    Print (1, head); // foward print
+    Print (1, head); // forward print
     Print (0, head); // reverse print
     
     // Ask for a key, then search list
