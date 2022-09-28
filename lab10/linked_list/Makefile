@@ -1,4 +1,4 @@
-
+#makefile variables
 CC = gcc
 FFLAGS = -O3 -Wall
 LFFLAG =
