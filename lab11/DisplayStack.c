@@ -10,7 +10,7 @@
 //prints a visual representation of the stack
 //top: pointer to the top of the stack
 void DisplayStack(node* top) {
-    if (top==NULL) {
+    if (top == NULL) {
         printf(" Stack is emtpy.\n");
         return;
     }

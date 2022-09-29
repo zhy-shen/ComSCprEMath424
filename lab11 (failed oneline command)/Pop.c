@@ -7,12 +7,9 @@
 
 #include "node.h"
 
-//removes the top node in the stack
-//top: pointer to the top of the stack
-//output: the value of the popped node
 void Pop(node** top, int* output) {
-    node* temp = *top;
-    if (temp == NULL) {
+node* temp = *top;
+    if (temp==NULL) {
         return;
     }
     else {
@@ -23,7 +20,7 @@ void Pop(node** top, int* output) {
     *top = temp;
 
     node* ptr = *top;
-    while (ptr != NULL) {
+    while (ptr!=NULL) {
         ptr->position = ptr->position - 1;
         ptr = ptr->next;
     }
