@@ -14,3 +14,10 @@ main.exe: $(OBJECTS)
 
 clean:
 	rm -f $(OBJECTS) main.exe
+
+help:
+	@echo "Valid targets:"
+	@echo " main.exe"
+	@echo " main.o"
+	@echo " matrix.o"
+	@echo " clean: removes *.o, *.txt, and *.exe files"
