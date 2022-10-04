@@ -205,7 +205,7 @@ void print_vector_full(const vector* vec, char* varname) {
  *  A: input vector
  *  B: input vector
  *output:
- *  C: resulting matrix from A + B
+ *  C: resulting vector from A + B
  */
 vector vector_add(const vector* x, const vector* y) {
     const int size = x->size;
@@ -261,10 +261,9 @@ double vector_dot_mult(const vector* x, const vector* y) {
 /**
  *this function prints a double (dot product)
  *input:
- *  A: double
+ *  z: double to print
  *  varname: label to print alongside
- *output:
- *  C: resulting vector from the dot product of A and B
+ *output: n/a
  */
 void print_scalar_full(const double* z, char* varname) {
     printf("\n %.100s =\n", &varname[1] );
