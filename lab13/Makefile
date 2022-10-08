@@ -20,4 +20,5 @@ help:
 	@echo " main.exe"
 	@echo " main.o"
 	@echo " matrix.o"
+	@echo " eigensolve.o"
 	@echo " clean: removes *.o, *.txt, and *.exe files"

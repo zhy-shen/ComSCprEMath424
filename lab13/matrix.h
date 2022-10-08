@@ -58,5 +58,7 @@ vector solve(const matrix* A, const vector* b);
 double magnitude(vector* x);
 vector normalize(vector* x);
 double power_iter (vector* v0, double tol, int max_iters, matrix* A);
-double si_power_iter (int mu, vector* v0, double tol, int max_iters, matrix* A);
+double si_power_iter (double mu, vector* v0, double tol, int max_iters, matrix* A);
+double rayleigh_iter (vector* v0, double tol, int max_iters, matrix* A);
+
 #endif /* matrix_h */

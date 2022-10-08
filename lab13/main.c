@@ -19,19 +19,16 @@ int main() {
     vget(x,3) = 3.0;
 
     mget(A,1,1) = 4.0;
-    mget(A,1,2) = 0.0;
-    mget(A,1,3) = 0.0;
-    mget(A,2,1) = 0.0;
     mget(A,2,2) = 8.0;
-    mget(A,2,3) = 0.0;
-    mget(A,3,1) = 0.0;
-    mget(A,3,2) = 0.0;
     mget(A,3,3) = 5.0;
     
     // Print vectors
     
     print_matrix(&A);
     print_vector(&x);
-    
-    printf("%lf\n", power_iter(&x, 0.0000001, 100, &A));
+
+
+    printf("Power Iter Result: %lf\n\n", power_iter(&x, 0.0000001, 100, &A));
+    printf("Rayleigh Result: %lf\n\n", rayleigh_iter(&x, 0.0000001, 100, &A));
+    printf("Shifted Inverse Result (Guess 1.0): %lf\n\n", si_power_iter(1.0, &x, 0.0000001, 100, &A));
 }
