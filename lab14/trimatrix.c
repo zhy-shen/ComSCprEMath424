@@ -1,6 +1,12 @@
 
 #include "trimatrix.h"
 
+/**
+ * Creates trimatrix of given size filled with 0's
+ *
+ * @param rows number of rows for trimatrix
+ * @return
+ */
 trimatrix new_trimatrix(const int rows)
 {
    trimatrix trimat;
@@ -21,6 +27,11 @@ trimatrix new_trimatrix(const int rows)
    return trimat;
 }
 
+/**
+ * Deletes given trimatrix
+ *
+ * @param t trimatrix to delete
+ */
 void delete_trimatrix(trimatrix* t)
 {
    free(t->left);
@@ -28,6 +39,12 @@ void delete_trimatrix(trimatrix* t)
    free(t->right);
 }
 
+/**
+ * Prints trimatrix
+ *
+ * @param trimat trimatrix to print
+ * @param varname label for trimatrix
+ */
 void print_trimatrix_full(const trimatrix* trimat, char* varname)
 {
    assert(trimat->rows==trimat->cols);
@@ -51,6 +68,14 @@ void print_trimatrix_full(const trimatrix* trimat, char* varname)
    printf("\n");
 }
 
+/**
+ * Get value at given coordinate from trimatrix
+ *
+ * @param trimat input trimatrix
+ * @param i
+ * @param j
+ * @return
+ */
 double tget(const trimatrix* trimat, const int i, const int j)
 {
    if (i==j)
@@ -63,6 +88,14 @@ double tget(const trimatrix* trimat, const int i, const int j)
    {  return 0.0; }
 }
 
+/**
+ * Set value at given coordinate from trimatrix
+ *
+ * @param trimat input trimatrix
+ * @param i
+ * @param j
+ * @param val value to set
+ */
 void tset(trimatrix* trimat, const int i, const int j,
 	  const double val)
 {
@@ -74,6 +107,13 @@ void tset(trimatrix* trimat, const int i, const int j,
    {  trimat->right[i-1]  = val;  }
 }
 
+/**
+ * Find the sum of two trimatrixes
+ *
+ * @param A input 1
+ * @param B input 2
+ * @return C = A + B
+ */
 trimatrix trimatrix_add(const trimatrix* A, const trimatrix* B)
 {
    const int rows = A->rows;
@@ -92,6 +132,13 @@ trimatrix trimatrix_add(const trimatrix* A, const trimatrix* B)
    return C;
 }
 
+/**
+ * Find the difference of two trimatrixes
+ *
+ * @param A input 1
+ * @param B input 2
+ * @return C = A - B
+ */
 trimatrix trimatrix_sub(const trimatrix* A, const trimatrix* B)
 {
    const int rows = A->rows;
@@ -110,6 +157,13 @@ trimatrix trimatrix_sub(const trimatrix* A, const trimatrix* B)
    return C;
 }
 
+/**
+ * Find the dot product of two trimatrixes
+ *
+ * @param A input 1
+ * @param B input 2
+ * @return C = A dot mult B
+ */
 trimatrix trimatrix_dot_mult(const trimatrix* A, const trimatrix* B)
 {
    const int rows = A->rows;
@@ -127,6 +181,7 @@ trimatrix trimatrix_dot_mult(const trimatrix* A, const trimatrix* B)
 	 
    return C;
 }
+
 
 vector trimatrix_vector_mult(const trimatrix* A, const vector* x)
 {
@@ -239,6 +294,12 @@ vector trisolve(const trimatrix* A, const vector* b)
    return x;
 }
 
+/**
+ * Creates a new pentamatrix with given size
+ *
+ * @param rows #rows for new pentamatrix
+ * @return pentamatrix with given size
+ */
 pentamatrix new_pentamatrix(const int rows)
 {
    pentamatrix p;
@@ -263,6 +324,11 @@ pentamatrix new_pentamatrix(const int rows)
    return p;
 }
 
+/**
+ * Deletes pentamatrix
+ *
+ * @param p given pentamatrix
+ */
 void delete_pentamatrix(pentamatrix* p)
 {
    free(p->leftleft);
@@ -272,6 +338,12 @@ void delete_pentamatrix(pentamatrix* p)
    free(p->rightright);
 }
 
+/**
+ * Print given pentamatrix
+ *
+ * @param p given pentamatrix
+ * @param varname label to print
+ */
 void print_pentamatrix_full(const pentamatrix* p, char* varname)
 {
    assert(p->rows==p->cols);
@@ -292,6 +364,15 @@ void print_pentamatrix_full(const pentamatrix* p, char* varname)
    printf("\n");
 }
 
+
+/**
+ * Get value at given coordinate from pentamatrix
+ *
+ * @param p input pentamatrix
+ * @param i
+ * @param j
+ * @return value at coordinate
+ */
 double pentaget(const pentamatrix* p, const int i, const int j)
 {
    if (i==j)
@@ -308,6 +389,14 @@ double pentaget(const pentamatrix* p, const int i, const int j)
    {  return 0.0; }
 }
 
+/**
+ * Set value at given coordinate from pentamatrix
+ *
+ * @param p input trimatrix
+ * @param i
+ * @param j
+ * @param val value to set
+ */
 void pentaset(pentamatrix* p, const int i, const int j, const double val)
 {
    if (i==j)
