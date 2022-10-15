@@ -7,8 +7,6 @@
 
 #include "matrix.h"
 #include <time.h>
-//CLOCKS_PER_SEC
-
 
 int main3() {
     // Get dimensions

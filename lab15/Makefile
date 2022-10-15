@@ -26,5 +26,9 @@ help:
 	@echo " QRdecomp.o"
 	@echo " GetShift.o"
 	@echo " FindZero.o"
+	@echo " main_transpose.o"
+	@echo " main_throughput.o"
+	@echo " main_QRAlg.o "
+	@echo " main_matrix.o"
 	@echo " clean: removes *.o, *.txt, and *.exe files"
 
