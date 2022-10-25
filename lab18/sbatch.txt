@@ -12,8 +12,8 @@
 #SBATCH --mail-type=END
 
 # LOAD MODULES, INSERT CODE, AND RUN YOUR PROGRAMS HERE
-./main.exe 2 20000000 2000 > 2core.txt
-./main.exe 5 20000000 2000 > 5core.txt
-./main.exe 10 20000000 2000 > 10core.txt
-./main.exe 20 20000000 2000 > 20core.txt
-./main.exe 50 20000000 2000 > 50core.txt
+./main.exe 1 200000000 > 1core.txt
+./main.exe 2 200000000 > 2core.txt
+./main.exe 4 200000000 > 4core.txt
+./main.exe 10 200000000 > 10core.txt
+./main.exe 20 200000000 > 20core.txt
