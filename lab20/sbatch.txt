@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Copy/paste this job script into a text file and submit with the command:
+#    sbatch thefilename
+# job standard output will go to the file slurm-%j.out (where %j is the job ID)
+
+#SBATCH --time=00:05:00   # walltime limit (HH:MM:SS)
+#SBATCH --nodes=3   # number of nodes
+#SBATCH --ntasks-per-node=36   # 36 processor core(s) per node
+#SBATCH --partition=class-short
+#SBATCH --mail-user=zhyshen@iastate.edu   # email address
+#SBATCH --mail-type=END
+
+# LOAD MODULES, INSERT CODE, AND RUN YOUR PROGRAMS HERE
+mpirun -np 2 ./main.exe 2880000 > output2.data
+mpirun -np 4 ./main.exe 28800000 > output4.data
+mpirun -np 8 ./main.exe 28800000 > output8.data
+mpirun -np 16 ./main.exe 28800000 > output16.data
+mpirun -np 30 ./main.exe 28800000 > output30.data
+mpirun -np 60 ./main.exe 28800000 > output60.data
+mpirun -np 90 ./main.exe 28800000 > output90.data
